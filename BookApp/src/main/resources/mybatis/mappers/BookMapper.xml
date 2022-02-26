@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.benxinm.bookapp.mappers.BookMapper">
+    <select id="getAllBook" resultType="com.benxinm.bookapp.entity.Book">
+        select book_id id,book_name name,book_author author,book_remark remark,book_cover_ref coverRef from t_book
+    </select>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.benxinm.bookapp.mappers.UserMapper">
+    <select id="getUserByAccount" resultType="com.benxinm.bookapp.entity.User">
+        select user_id id,user_account account,user_psd psd from t_user where user_account=#{account}
+    </select>
+    <select id="check" resultType="int">
+        select count(*) from t_user where user_account=#{account}
+    </select>
+    <insert id="insertUser" >
+        insert into t_user values (null,#{account},MD5(#{psd}))
+    </insert>
+    <select id="getPsdByAccount" resultType="String">
+        select user_psd from t_user where user_account=#{account}
+    </select>
+</mapper>

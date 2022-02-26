@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+    <ImageView
+        android:id="@+id/bookCover"
+        android:layout_width="80dp"
+        android:layout_height="90dp"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/bookName"
+                android:textSize="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/authorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:alpha="0.7"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/remark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="10dp" />
+    </LinearLayout>
+</LinearLayout>
